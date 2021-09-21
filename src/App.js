@@ -10,6 +10,8 @@ import {
   faTimes,
   faEye,
   faRecordVinyl,
+  faSignOutAlt,
+  faCropAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Container = styled.div`
@@ -34,7 +36,6 @@ const ExitButton = styled.div`
   position: absolute;
   bottom: 10px;
   left: 10px;
-  box-shadow: #655a4c 3px 3px 3px 3px;
   width: 130px;
   height: 20px;
   border-radius: 10px;
@@ -42,12 +43,21 @@ const ExitButton = styled.div`
   color: #fff;
   font-size: 14px;
   padding: 10px;
+  cursor: pointer;
+
+  &:hover {
+    height: 21px;
+    box-shadow: #655a4c 3px 3px 3px 3px;
+    transition: 0.3s;
+  }
+  span {
+    padding-left: 8px;
+  }
 `;
 const CaptureButton = styled.div`
   position: absolute;
   bottom: 10px;
   right: 10px;
-  box-shadow: #655a4c 3px 3px 3px 3px;
   width: 130px;
   height: 20px;
   border-radius: 10px;
@@ -55,6 +65,16 @@ const CaptureButton = styled.div`
   color: #fff;
   font-size: 14px;
   padding: 10px;
+  cursor: pointer;
+
+  &:hover {
+    height: 21px;
+    box-shadow: #655a4c 3px 3px 8px 0px;
+    transition: 0.3s;
+  }
+  span {
+    padding-left: 8px;
+  }
 `;
 
 const RightContainer = styled.div`
@@ -83,9 +103,14 @@ const ButtonCancel = styled.button`
   border: none;
   color: #fff;
   border-bottom-left-radius: 10px;
+  cursor: pointer;
 
+  &:hover {
+    box-shadow: #655a4c 3px 3px 8px 0px;
+    transition: 0.3s;
+  }
   span {
-    padding-left: 10px;
+    padding-left: 8px;
   }
 `;
 const ButtonGood = styled.button`
@@ -98,9 +123,14 @@ const ButtonGood = styled.button`
   border: none;
   color: #fff;
   border-bottom-right-radius: 10px;
+  cursor: pointer;
 
+  &:hover {
+    box-shadow: #655a4c 3px 3px 8px 0px;
+    transition: 0.3s;
+  }
   span {
-    padding-left: 10px;
+    padding-left: 8px;
   }
 `;
 
@@ -114,6 +144,12 @@ const StartButton = styled.button`
   border-radius: 20px;
   top: 10px;
   background-color: #4f4b48;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: #655a4c 3px 3px 8px 0px;
+    transition: 0.3s;
+  }
 
   span {
     padding-left: 10px;
@@ -125,17 +161,17 @@ const App = () => (
   <Container>
     <UpperContainer>
       <ImageSectionContainer>
-        <StartButton>
+        <StartButton onClick={() => console.log("click")}>
           <FontAwesomeIcon icon={faRecordVinyl} />
           <span>00 03 45</span>
         </StartButton>
 
-        <ExitButton>
-          <FontAwesomeIcon icon={faCheck} />
+        <ExitButton onClick={() => console.log("click")}>
+          <FontAwesomeIcon icon={faSignOutAlt} />
           <span>Exit Session</span>
         </ExitButton>
-        <CaptureButton>
-          <FontAwesomeIcon icon={faEye} />
+        <CaptureButton onClick={() => console.log("click")}>
+          <FontAwesomeIcon icon={faCropAlt} />
           <span>Capture Screen</span>
         </CaptureButton>
       </ImageSectionContainer>
@@ -147,10 +183,10 @@ const App = () => (
     <RightContainer>
       <RightContainerion />
 
-      <ButtonCancel>
+      <ButtonCancel onClick={() => console.log("click")}>
         <FontAwesomeIcon icon={faTimes} /> <span>Not Good</span>
       </ButtonCancel>
-      <ButtonGood>
+      <ButtonGood onClick={() => console.log("click")}>
         <FontAwesomeIcon icon={faCheck} /> <span> Good</span>
       </ButtonGood>
     </RightContainer>

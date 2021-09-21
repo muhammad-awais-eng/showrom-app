@@ -5,7 +5,7 @@ import Checkbox from "./CheckBox";
 import styled from "styled-components";
 import { Tabs, TabList, Tab, TabPanel } from "react-tabs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlay, faEye } from "@fortawesome/free-solid-svg-icons";
+import { faPlay, faEye, faDotCircle } from "@fortawesome/free-solid-svg-icons";
 
 const STabs = styled(Tabs)`
   font-family: "Segoe UI", sans-serif;
@@ -73,6 +73,7 @@ const Icon = styled.div`
 `;
 const Text = styled.div`
   width: 80%;
+  line-height: 25px;
 `;
 const ViewButton = styled.div`
   width: 12%;
@@ -82,6 +83,15 @@ const ViewButton = styled.div`
   color: #fff;
   font-size: 14px;
   padding: 10px;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: #655a4c 1px 3px 8px 0px;
+    transition: 0.3s;
+  }
+  span {
+    padding-left: 8px;
+  }
 `;
 const RunningButton = styled.div`
   width: 12%;
@@ -91,6 +101,15 @@ const RunningButton = styled.div`
   color: #fff;
   font-size: 14px;
   padding: 10px;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: #655a4c 1px 3px 8px 0px;
+    transition: 0.3s;
+  }
+  span {
+    padding-left: 8px;
+  }
 `;
 const StartButton = styled.div`
   width: 12%;
@@ -99,7 +118,16 @@ const StartButton = styled.div`
   background-color: #b71234;
   color: #fff;
   font-size: 14px;
-  padding: 10px; ;
+  padding: 10px;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: #655a4c 1px 3px 8px 0px;
+    transition: 0.3s;
+  }
+  span {
+    padding-left: 8px;
+  }
 `;
 
 STabPanel.tabsRole = "TabPanel";
@@ -151,8 +179,9 @@ function BottomSection() {
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type specimen book.
             </Text>
-            <ViewButton>
-              <FontAwesomeIcon icon={faEye} className="sub-space" /> View Item
+            <ViewButton onClick={() => console.log("click")}>
+              <FontAwesomeIcon icon={faEye} className="sub-space" />{" "}
+              <span>View Item</span>
             </ViewButton>
           </Wrapper>
           <Wrapper>
@@ -172,8 +201,9 @@ function BottomSection() {
               It has roots in a piece of classical Latin literature from 45 BC,
               making it over 2000 years old.
             </Text>
-            <RunningButton>
-              <FontAwesomeIcon icon={faEye} className="sub-space" /> Running
+            <RunningButton onClick={() => console.log("click")}>
+              <FontAwesomeIcon icon={faDotCircle} className="sub-space" />{" "}
+              <span>Running</span>
             </RunningButton>
           </Wrapper>
           <Wrapper>
@@ -192,8 +222,9 @@ function BottomSection() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               lobortis venenatis nulla, a condimentum massa facilisis quis.
             </Text>
-            <StartButton>
-              <FontAwesomeIcon icon={faPlay} className="sub-space" /> Start Item
+            <StartButton onClick={() => console.log("click")}>
+              <FontAwesomeIcon icon={faPlay} className="sub-space" />{" "}
+              <span>Start Item</span>
             </StartButton>
           </Wrapper>
         </STabPanel>
@@ -215,8 +246,9 @@ function BottomSection() {
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer
             </Text>
-            <ViewButton>
-              <FontAwesomeIcon icon={faEye} className="sub-space" /> View Item
+            <ViewButton onClick={() => console.log("click")}>
+              <FontAwesomeIcon icon={faEye} className="sub-space" />{" "}
+              <span>View Item</span>
             </ViewButton>
           </Wrapper>
           <Wrapper>
@@ -234,8 +266,9 @@ function BottomSection() {
             <Text>
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </Text>
-            <RunningButton>
-              <FontAwesomeIcon icon={faEye} className="sub-space" /> Running
+            <RunningButton onClick={() => console.log("click")}>
+              <FontAwesomeIcon icon={faDotCircle} className="sub-space" />{" "}
+              <span>Running</span>
             </RunningButton>
           </Wrapper>
           <Wrapper>
@@ -251,8 +284,9 @@ function BottomSection() {
               </div>
             </Icon>
             <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit</Text>
-            <StartButton>
-              <FontAwesomeIcon icon={faPlay} className="sub-space" /> Start Item
+            <StartButton onClick={() => console.log("click")}>
+              <FontAwesomeIcon icon={faPlay} className="sub-space" />{" "}
+              <span>Start Item</span>
             </StartButton>
           </Wrapper>
         </STabPanel>
@@ -274,8 +308,9 @@ function BottomSection() {
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s
             </Text>
-            <ViewButton>
-              <FontAwesomeIcon icon={faEye} className="sub-space" /> View Item
+            <ViewButton onClick={() => console.log("click")}>
+              <FontAwesomeIcon icon={faEye} className="sub-space" />{" "}
+              <span>View Item</span>
             </ViewButton>
           </Wrapper>
           <Wrapper>
@@ -294,8 +329,9 @@ function BottomSection() {
               Contrary to popular belief, Lorem Ipsum is not simply random text.
               It has roots in a piece of classical Latin literature from 45 BC,
             </Text>
-            <RunningButton>
-              <FontAwesomeIcon icon={faEye} className="sub-space" /> Running
+            <RunningButton onClick={() => console.log("click")}>
+              <FontAwesomeIcon icon={faDotCircle} className="sub-space" />{" "}
+              <span>Running</span>
             </RunningButton>
           </Wrapper>
           <Wrapper>
@@ -313,8 +349,9 @@ function BottomSection() {
             <Text>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </Text>
-            <StartButton>
-              <FontAwesomeIcon icon={faPlay} className="sub-space" /> Start Item
+            <StartButton onClick={() => console.log("click")}>
+              <FontAwesomeIcon icon={faPlay} className="sub-space" />{" "}
+              <span>Start Item</span>
             </StartButton>
           </Wrapper>
         </STabPanel>
@@ -335,8 +372,9 @@ function BottomSection() {
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry.
             </Text>
-            <ViewButton>
-              <FontAwesomeIcon icon={faEye} className="sub-space" /> View Item
+            <ViewButton onClick={() => console.log("click")}>
+              <FontAwesomeIcon icon={faEye} className="sub-space" />{" "}
+              <span>View Item</span>
             </ViewButton>
           </Wrapper>
           <Wrapper>
@@ -354,8 +392,9 @@ function BottomSection() {
             <Text>
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </Text>
-            <RunningButton>
-              <FontAwesomeIcon icon={faEye} className="sub-space" /> Running
+            <RunningButton onClick={() => console.log("click")}>
+              <FontAwesomeIcon icon={faDotCircle} className="sub-space" />{" "}
+              <span>Running</span>
             </RunningButton>
           </Wrapper>
           <Wrapper>
@@ -373,7 +412,7 @@ function BottomSection() {
             <Text>
               lobortis venenatis nulla, a condimentum massa facilisis quis.
             </Text>
-            <StartButton>
+            <StartButton onClick={() => console.log("click")}>
               <FontAwesomeIcon icon={faPlay} className="sub-space" /> Start Item
             </StartButton>
           </Wrapper>

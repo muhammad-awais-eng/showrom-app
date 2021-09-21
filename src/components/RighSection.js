@@ -188,19 +188,27 @@ const ButtonTag = styled.div`
 
   button {
     display: none;
-    background-color: #f36523;
     width: 40px;
     margin: 45px 2px;
     height: 40px;
     border: none;
     border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: #655a4c 3px 3px 8px 0px;
+      height: 42px;
+      width: 42px;
+      transition: 0.2s;
+    }
   }
 `;
 
 const ImgDiv = styled.div`
   text-align: center;
   border: 1px solid #000;
-  background-image: url(${img});
+  background: url(${img}) no-repeat center center;
+  background-size: cover;
   width: 165px;
   border-radius: 10px;
   height: 120px;
@@ -321,13 +329,25 @@ function RightSection() {
                 <SideShow>
                   <FontAwesomeIcon icon={faImage} />
                 </SideShow>{" "}
-                <button style={{ backgroundColor: "#00a652" }} className="my">
+                <button
+                  onClick={() => console.log("click")}
+                  style={{ backgroundColor: "#00a652" }}
+                  className="my"
+                >
                   <FontAwesomeIcon icon={faDownload} />
                 </button>
-                <button style={{ backgroundColor: "#f36523" }} className="my">
+                <button
+                  onClick={() => console.log("click")}
+                  style={{ backgroundColor: "#f36523" }}
+                  className="my"
+                >
                   <FontAwesomeIcon icon={faPencilAlt} />
                 </button>
-                <button style={{ backgroundColor: "#b71234" }} className="my">
+                <button
+                  onClick={() => console.log("click")}
+                  style={{ backgroundColor: "#b71234" }}
+                  className="my"
+                >
                   <FontAwesomeIcon icon={faTrash} />
                 </button>
               </ButtonTag>
@@ -337,13 +357,25 @@ function RightSection() {
                 <SideShow>
                   <FontAwesomeIcon icon={faImage} />
                 </SideShow>{" "}
-                <button style={{ backgroundColor: "#00a652" }} className="my">
+                <button
+                  onClick={() => console.log("click")}
+                  style={{ backgroundColor: "#00a652" }}
+                  className="my"
+                >
                   <FontAwesomeIcon icon={faDownload} />
                 </button>
-                <button style={{ backgroundColor: "#f36523" }} className="my">
+                <button
+                  onClick={() => console.log("click")}
+                  style={{ backgroundColor: "#f36523" }}
+                  className="my"
+                >
                   <FontAwesomeIcon icon={faPencilAlt} />
                 </button>
-                <button style={{ backgroundColor: "#b71234" }} className="my">
+                <button
+                  onClick={() => console.log("click")}
+                  style={{ backgroundColor: "#b71234" }}
+                  className="my"
+                >
                   <FontAwesomeIcon icon={faTrash} />
                 </button>
               </ButtonTag>
@@ -353,13 +385,25 @@ function RightSection() {
                 <SideShow>
                   <FontAwesomeIcon icon={faImage} />
                 </SideShow>{" "}
-                <button style={{ backgroundColor: "#00a652" }} className="my">
+                <button
+                  onClick={() => console.log("click")}
+                  style={{ backgroundColor: "#00a652" }}
+                  className="my"
+                >
                   <FontAwesomeIcon icon={faDownload} />
                 </button>
-                <button style={{ backgroundColor: "#f36523" }} className="my">
+                <button
+                  onClick={() => console.log("click")}
+                  style={{ backgroundColor: "#f36523" }}
+                  className="my"
+                >
                   <FontAwesomeIcon icon={faPencilAlt} />
                 </button>
-                <button style={{ backgroundColor: "#b71234" }} className="my">
+                <button
+                  onClick={() => console.log("click")}
+                  style={{ backgroundColor: "#b71234" }}
+                  className="my"
+                >
                   <FontAwesomeIcon icon={faTrash} />
                 </button>
               </ButtonTag>
@@ -369,13 +413,25 @@ function RightSection() {
                 <SideShow>
                   <FontAwesomeIcon icon={faImage} />
                 </SideShow>{" "}
-                <button style={{ backgroundColor: "#00a652" }} className="my">
+                <button
+                  onClick={() => console.log("click")}
+                  style={{ backgroundColor: "#00a652" }}
+                  className="my"
+                >
                   <FontAwesomeIcon icon={faDownload} />
                 </button>
-                <button style={{ backgroundColor: "#f36523" }} className="my">
+                <button
+                  onClick={() => console.log("click")}
+                  style={{ backgroundColor: "#f36523" }}
+                  className="my"
+                >
                   <FontAwesomeIcon icon={faPencilAlt} />
                 </button>
-                <button style={{ backgroundColor: "#b71234" }} className="my">
+                <button
+                  onClick={() => console.log("click")}
+                  style={{ backgroundColor: "#b71234" }}
+                  className="my"
+                >
                   <FontAwesomeIcon icon={faTrash} />
                 </button>
               </ButtonTag>
