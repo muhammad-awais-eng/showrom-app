@@ -24,7 +24,7 @@ STabList.tabsRole = "TabList";
 const STab = styled(Tab)`
   margin-right: 4px;
   color: #67686a;
-  width: 200px;
+  width: 250px;
   height: 30px;
   text-align: center;
   font-weight: bold;
@@ -63,7 +63,7 @@ const STabPanel = styled(TabPanel)`
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 `;
 const Icon = styled.div`
   width: 5%;
@@ -130,6 +130,14 @@ const StartButton = styled.div`
   }
 `;
 
+const Divider = styled.div`
+  width: 95%;
+  margin-left: 5%;
+  height: 1px;
+  border-bottom: 1px solid #dfd7ca;
+  margin-bottom: 10px;
+`;
+
 STabPanel.tabsRole = "TabPanel";
 
 function BottomSection() {
@@ -184,6 +192,8 @@ function BottomSection() {
               <span>View Item</span>
             </ViewButton>
           </Wrapper>
+          <Divider />
+
           <Wrapper>
             <Icon>
               <div style={{ fontFamily: "system-ui" }}>
@@ -206,6 +216,7 @@ function BottomSection() {
               <span>Running</span>
             </RunningButton>
           </Wrapper>
+          <Divider />
           <Wrapper>
             <Icon>
               <div style={{ fontFamily: "system-ui" }}>
@@ -228,6 +239,7 @@ function BottomSection() {
             </StartButton>
           </Wrapper>
         </STabPanel>
+
         <STabPanel>
           <Wrapper>
             <Icon>
@@ -251,6 +263,7 @@ function BottomSection() {
               <span>View Item</span>
             </ViewButton>
           </Wrapper>
+          <Divider />
           <Wrapper>
             <Icon>
               <div style={{ fontFamily: "system-ui" }}>
@@ -271,6 +284,7 @@ function BottomSection() {
               <span>Running</span>
             </RunningButton>
           </Wrapper>
+          <Divider />
           <Wrapper>
             <Icon>
               <div style={{ fontFamily: "system-ui" }}>
@@ -313,6 +327,7 @@ function BottomSection() {
               <span>View Item</span>
             </ViewButton>
           </Wrapper>
+          <Divider />
           <Wrapper>
             <Icon>
               <div style={{ fontFamily: "system-ui" }}>
@@ -334,6 +349,7 @@ function BottomSection() {
               <span>Running</span>
             </RunningButton>
           </Wrapper>
+          <Divider />
           <Wrapper>
             <Icon>
               <div style={{ fontFamily: "system-ui" }}>
@@ -377,6 +393,7 @@ function BottomSection() {
               <span>View Item</span>
             </ViewButton>
           </Wrapper>
+          <Divider />
           <Wrapper>
             <Icon>
               <div style={{ fontFamily: "system-ui" }}>
@@ -397,6 +414,7 @@ function BottomSection() {
               <span>Running</span>
             </RunningButton>
           </Wrapper>
+          <Divider />
           <Wrapper>
             <Icon>
               <div style={{ fontFamily: "system-ui" }}>
