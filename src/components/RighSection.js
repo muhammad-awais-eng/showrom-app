@@ -33,10 +33,11 @@ STabList.tabsRole = "TabList";
 const STab = styled(Tab)`
   margin-right: 4px;
   color: #ffff;
-  width: 200px;
+  width: 33.3%;
   height: 30px;
   text-align: center;
   font-weight: bolder;
+  font-size: 0.6rem;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   padding-top: 10px;
@@ -85,13 +86,16 @@ const Wrapper = styled.div`
   justify-content: space-between;
 `;
 const Icon = styled.div`
-  width: 5%;
-
+  width: 80%;
   text-align: left;
   padding-left: 5px;
 `;
+const Selector = styled.div`
+  width: auto;
+  padding-right: 2px;
+`;
 const IconHeader = styled.div`
-  width: 220px;
+  width: 100%;
 
   span {
     font-size: 13px;
@@ -163,8 +167,11 @@ const EvidenceSection = styled.div`
   width: 100%;
   margin-top: 30px;
   height: 300px;
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  /* grid-template-columns: auto auto; */
 `;
 
 const SideShow = styled.div`
@@ -188,7 +195,7 @@ const ButtonTag = styled.div`
 
   button {
     display: none;
-    width: 40px;
+    width: 20%;
     margin: 45px 2px;
     height: 40px;
     border: none;
@@ -197,8 +204,8 @@ const ButtonTag = styled.div`
 
     &:hover {
       box-shadow: #655a4c 3px 3px 8px 0px;
-      height: 42px;
-      width: 42px;
+      height: 40px;
+      width: 20%;
       transition: 0.2s;
     }
   }
@@ -206,10 +213,13 @@ const ButtonTag = styled.div`
 
 const ImgDiv = styled.div`
   text-align: center;
+  flex: 0 40%;
+  box-shadow: 0 0 0 1px black;
+  margin-bottom: 10px;
   border: 1px solid #000;
   background: url(${img}) no-repeat center center;
   background-size: cover;
-  width: 165px;
+  width: 100%;
   border-radius: 10px;
   height: 120px;
 
@@ -249,9 +259,9 @@ function RightSection() {
                 </IconHeader>
               </Icon>
 
-              <Icon>
+              <Selector>
                 <FontAwesomeIcon icon={faEllipsisH} className="sub-space" />
-              </Icon>
+              </Selector>
             </Wrapper>
             <Text>
               This task will require to show me how to undo the extronet and
@@ -267,9 +277,9 @@ function RightSection() {
                 </IconHeader>
               </Icon>
 
-              <Icon>
+              <Selector>
                 <FontAwesomeIcon icon={faEllipsisH} className="sub-space" />
-              </Icon>
+              </Selector>
             </Wrapper>
             <StoreLocation></StoreLocation>
           </Container>
@@ -283,9 +293,9 @@ function RightSection() {
                 </IconHeader>
               </Icon>
 
-              <Icon>
+              <Selector>
                 <FontAwesomeIcon icon={faEllipsisH} className="sub-space" />
-              </Icon>
+              </Selector>
             </Wrapper>
             <BoxWrapper>
               <Box />
@@ -302,9 +312,9 @@ function RightSection() {
                 </IconHeader>
               </Icon>
 
-              <Icon>
+              <Selector>
                 <FontAwesomeIcon icon={faEllipsisH} className="sub-space" />
-              </Icon>
+              </Selector>
             </Wrapper>
             <BoxWrapper>
               <ImgContainter>

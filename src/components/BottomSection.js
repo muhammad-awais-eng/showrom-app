@@ -24,7 +24,7 @@ STabList.tabsRole = "TabList";
 const STab = styled(Tab)`
   margin-right: 4px;
   color: #67686a;
-  width: 250px;
+  width: 25%;
   height: 30px;
   text-align: center;
   font-weight: bold;
@@ -67,66 +67,70 @@ const Wrapper = styled.div`
 `;
 const Icon = styled.div`
   width: 5%;
+  padding-top: 5px;
   text-align: center;
   justify-content: center;
   align-items: center;
 `;
 const Text = styled.div`
   width: 80%;
-  line-height: 25px;
+  line-height: 20px;
 `;
 const ViewButton = styled.div`
-  width: 12%;
+  min-width: 15%;
   height: 20px;
   border-radius: 10px;
   background-color: #00a652;
   color: #fff;
-  font-size: 14px;
-  padding: 10px;
+  font-size: 0.8rem;
+  padding: 10px 5px;
   cursor: pointer;
+  text-align: center;
 
   &:hover {
     box-shadow: #655a4c 1px 3px 8px 0px;
     transition: 0.3s;
   }
   span {
-    padding-left: 8px;
+    padding-left: 0.2rem;
   }
 `;
 const RunningButton = styled.div`
-  width: 12%;
+  min-width: 15%;
   height: 20px;
   border-radius: 10px;
   background-color: #f36525;
   color: #fff;
-  font-size: 14px;
-  padding: 10px;
+  font-size: 0.8rem;
+  padding: 10px 5px;
   cursor: pointer;
+  text-align: center;
 
   &:hover {
     box-shadow: #655a4c 1px 3px 8px 0px;
     transition: 0.3s;
   }
   span {
-    padding-left: 8px;
+    padding-left: 0.2rem;
   }
 `;
 const StartButton = styled.div`
-  width: 12%;
+  min-width: 15%;
   height: 20px;
   border-radius: 10px;
   background-color: #b71234;
   color: #fff;
-  font-size: 14px;
-  padding: 10px;
+  font-size: 0.8rem;
+  padding: 10px 5px;
   cursor: pointer;
-
+  align-items: center;
+  text-align: center;
   &:hover {
     box-shadow: #655a4c 1px 3px 8px 0px;
     transition: 0.3s;
   }
   span {
-    padding-left: 8px;
+    padding-left: 0.2rem;
   }
 `;
 
@@ -183,13 +187,11 @@ function BottomSection() {
             </Icon>
             <Text>
               Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              industry.
             </Text>
             <ViewButton onClick={() => console.log("click")}>
               <FontAwesomeIcon icon={faEye} className="sub-space" />{" "}
-              <span>View Item</span>
+              <span>ViewItem</span>
             </ViewButton>
           </Wrapper>
           <Divider />
@@ -208,8 +210,7 @@ function BottomSection() {
             </Icon>
             <Text>
               Contrary to popular belief, Lorem Ipsum is not simply random text.
-              It has roots in a piece of classical Latin literature from 45 BC,
-              making it over 2000 years old.
+              It has roots
             </Text>
             <RunningButton onClick={() => console.log("click")}>
               <FontAwesomeIcon icon={faDotCircle} className="sub-space" />{" "}
@@ -230,8 +231,7 @@ function BottomSection() {
               </div>
             </Icon>
             <Text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-              lobortis venenatis nulla, a condimentum massa facilisis quis.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </Text>
             <StartButton onClick={() => console.log("click")}>
               <FontAwesomeIcon icon={faPlay} className="sub-space" />{" "}
@@ -254,13 +254,11 @@ function BottomSection() {
               </div>
             </Icon>
             <Text>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer
+              Lorem Ipsum is simply dummy text of and typesetting industry.
             </Text>
             <ViewButton onClick={() => console.log("click")}>
               <FontAwesomeIcon icon={faEye} className="sub-space" />{" "}
-              <span>View Item</span>
+              <span>ViewItem</span>
             </ViewButton>
           </Wrapper>
           <Divider />
