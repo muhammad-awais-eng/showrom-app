@@ -76,7 +76,7 @@ const CaptureButton = styled.div`
 `;
 
 const RightContainer = styled.div`
-  height: 70vh;
+  height: 80vh;
   background-color: white;
   width: 30%;
   position: relative;
@@ -192,14 +192,14 @@ const App = () => (
     <RightContainer>
       <RightContainerion />
 
-      <ButtonRapper>
+      {/* <ButtonRapper>
         <ButtonCancel onClick={() => console.log("click")}>
           <FontAwesomeIcon icon={faTimes} /> <span>Not Good</span>
         </ButtonCancel>
         <ButtonGood onClick={() => console.log("click")}>
           <FontAwesomeIcon icon={faCheck} /> <span> Good</span>
         </ButtonGood>
-      </ButtonRapper>
+      </ButtonRapper> */}
     </RightContainer>
   </Container>
 );

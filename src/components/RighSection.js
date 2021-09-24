@@ -14,6 +14,8 @@ import {
   faPencilAlt,
   faTrash,
   faDownload,
+  faTimes,
+  faCheck,
 } from "@fortawesome/free-solid-svg-icons";
 
 const STabs = styled(Tabs)`
@@ -78,6 +80,52 @@ const Container = styled.div`
   background-color: #ffff;
   height: 100px;
   margin-bottom: 10px;
+`;
+
+const ButtonRapper = styled.div`
+  width: 100%;
+  height: 60px;
+  margin-top: 40px;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+`;
+
+const ButtonCancel = styled.button`
+  width: 40%;
+  height: 60px;
+
+  background-color: #444444;
+  border: none;
+  color: #fff;
+  border-bottom-left-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: #655a4c 3px 3px 8px 0px;
+    transition: 0.3s;
+  }
+  span {
+    padding-left: 8px;
+  }
+`;
+const ButtonGood = styled.button`
+  width: 45%;
+  height: 60px;
+  background-color: #00a652;
+  border: none;
+  color: #fff;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: #655a4c 3px 3px 8px 0px;
+    transition: 0.3s;
+  }
+  span {
+    padding-left: 8px;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -328,9 +376,25 @@ function RightSection() {
               </ImgContainter>
             </BoxWrapper>
           </Container>
+          <ButtonRapper>
+            <ButtonCancel onClick={() => console.log("click")}>
+              <FontAwesomeIcon icon={faTimes} /> <span>Not Good</span>
+            </ButtonCancel>
+            <ButtonGood onClick={() => console.log("click")}>
+              <FontAwesomeIcon icon={faCheck} /> <span> Good</span>
+            </ButtonGood>
+          </ButtonRapper>
         </STabPanel>
         <STabPanel>
           <Textarea value={value} onChange={handleChange} />
+          <ButtonRapper>
+            <ButtonCancel onClick={() => console.log("click")}>
+              <FontAwesomeIcon icon={faTimes} /> <span>Not Good</span>
+            </ButtonCancel>
+            <ButtonGood onClick={() => console.log("click")}>
+              <FontAwesomeIcon icon={faCheck} /> <span> Good</span>
+            </ButtonGood>
+          </ButtonRapper>
         </STabPanel>
         <STabPanel>
           <EvidenceSection>
@@ -418,6 +482,7 @@ function RightSection() {
                 </button>
               </ButtonTag>
             </ImgDiv>
+
             <ImgDiv>
               <ButtonTag>
                 <SideShow>
@@ -446,6 +511,14 @@ function RightSection() {
                 </button>
               </ButtonTag>
             </ImgDiv>
+            <ButtonRapper>
+              <ButtonCancel onClick={() => console.log("click")}>
+                <FontAwesomeIcon icon={faTimes} /> <span>Not Good</span>
+              </ButtonCancel>
+              <ButtonGood onClick={() => console.log("click")}>
+                <FontAwesomeIcon icon={faCheck} /> <span> Good</span>
+              </ButtonGood>
+            </ButtonRapper>
           </EvidenceSection>
         </STabPanel>
       </STabs>
